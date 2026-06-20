@@ -194,9 +194,10 @@
     for (var i = 0; i < 18; i++) {
       var particle = document.createElement('div');
       var size = Math.random() * 8 + 4;
+      var hue = Math.random() > 0.5 ? '107,184,214' : '42,157,143';
       particle.style.cssText =
         'position:absolute;width:' + size + 'px;height:' + size + 'px;' +
-        'background:radial-gradient(circle,rgba(245,166,35,0.45) 0%,transparent 70%);' +
+        'background:radial-gradient(circle,rgba(' + hue + ',0.4) 0%,transparent 70%);' +
         'border-radius:50%;left:' + (Math.random() * 100) + '%;top:' + (Math.random() * 100) + '%;' +
         'animation:floatParticle ' + (Math.random() * 20 + 15) + 's ease-in-out ' + (Math.random() * 5) + 's infinite;' +
         'pointer-events:none;';
@@ -325,8 +326,8 @@
     toast.setAttribute('role', 'status');
     toast.innerHTML = '<i class="fas fa-check-circle"></i><span>Pedido enviado! Aguarde nosso contato.</span>';
     toast.style.cssText =
-      'position:fixed;top:100px;right:2rem;background:linear-gradient(135deg,#10B981,#059669);' +
-      'color:#fff;padding:1rem 1.5rem;border-radius:1rem;box-shadow:0 10px 25px rgba(0,0,0,0.2);' +
+      'position:fixed;top:100px;right:2rem;background:linear-gradient(135deg,#2A9D8F,#1565A8);' +
+      'color:#fff;padding:1rem 1.5rem;border-radius:0.75rem;box-shadow:0 10px 25px rgba(12,35,64,0.2);' +
       'display:flex;align-items:center;gap:0.75rem;font-weight:600;z-index:10000;';
     document.body.appendChild(toast);
     setTimeout(function () { toast.remove(); }, 3000);
